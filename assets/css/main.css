@@ -608,7 +608,7 @@ main { padding-top: var(--nav-h); }
   border-top: none;
   border-bottom: none;
   padding: 40px 48px 72px;
-  grid-auto-rows: 290px; /* fixed row height — all cards in a row stay aligned */
+  grid-auto-rows: 320px; /* fixed row height — all cards in a row stay aligned */
 }
 
 .projects-grid--immersive .project-card {
