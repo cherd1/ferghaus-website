@@ -567,6 +567,15 @@ main { padding-top: var(--nav-h); }
   flex-shrink: 0;
 }
 
+.project-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding: 14px 4px 18px;
+  border-top: 1px solid var(--border);
+}
+
 /* CTA card (empty slot in grid) */
 .project-card-cta {
   display: flex;
