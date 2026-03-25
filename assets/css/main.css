@@ -357,7 +357,7 @@ main { padding-top: var(--nav-h); }
   font-weight: 300;
   color: var(--text-secondary);
   margin-top: 20px;
-  max-width: 560px;
+  max-width: 720px;
 }
 
 /* Breadcrumb */
@@ -608,12 +608,15 @@ main { padding-top: var(--nav-h); }
   border-top: none;
   border-bottom: none;
   padding: 40px 48px 72px;
+  grid-auto-rows: 290px; /* fixed row height — all cards in a row stay aligned */
 }
 
 .projects-grid--immersive .project-card {
   padding: 0;
   border: 1px solid var(--border);
   transition: border-color 0.3s, background 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 .projects-grid--immersive .project-card:hover {
   background: var(--bg);
@@ -624,21 +627,20 @@ main { padding-top: var(--nav-h); }
 .project-card--featured {
   grid-column: span 2;
 }
-/* Featured card: wider so 16:9 is less tall, reducing row height */
-.projects-grid--immersive .project-card--featured .project-card-img {
-  aspect-ratio: 16 / 9;
-}
 
-/* Taller 3:2 images for immersive grid */
+/* Images fill available height — no fixed aspect-ratio needed */
 .projects-grid--immersive .project-card-img {
-  aspect-ratio: 3 / 2;
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: unset;
   border: none;
 }
 
-/* Info bar sits flush inside the card border */
+/* Info bar sits flush inside the card border, never shrinks */
 .projects-grid--immersive .project-card-info {
   padding: 18px 20px;
   border-top: 1px solid var(--border);
+  flex-shrink: 0;
 }
 
 /* Hover overlay — subtle scrim + view cue */
@@ -779,9 +781,9 @@ main { padding-top: var(--nav-h); }
 
 .cta-h2 {
   font-family: var(--font-head);
-  font-size: clamp(36px, 4vw, 68px);
+  font-size: clamp(26px, 3vw, 44px);
   font-weight: 200;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 .cta-h2 em {
