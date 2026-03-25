@@ -575,13 +575,12 @@ main { padding-top: var(--nav-h); }
   align-items: flex-start;
   padding: 40px 32px !important; /* override the card image padding */
   border-right: none;
-  border-bottom: 1px solid var(--border);
   text-decoration: none;
-  background: var(--surface);
+  background: var(--bg);
   transition: background 0.25s;
   min-height: 200px;
 }
-.project-card-cta:hover { background: #e8e5df; }
+.project-card-cta:hover { background: var(--surface); }
 .project-card-cta .cta-label {
   font-size: 10px;
   font-weight: 400;
