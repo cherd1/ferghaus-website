@@ -5,17 +5,17 @@
 
 /* ─── CUSTOM PROPERTIES ──────────────────────────────────── */
 :root {
-  --bg:             #f4f3f0;
-  --surface:        #eceae6;
-  --border:         #e0ded9;
-  --border-mid:     #cac8c3;
-  --text-primary:   #111010;
-  --text-secondary: #6b6860;
-  --text-muted:     #aaa9a5;
+  --bg:             #ffffff;
+  --surface:        #f5f4f1;
+  --border:         #e0deda;
+  --border-mid:     #c8c5bf;
+  --text-primary:   #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-muted:     #aeaeb2;
 
   --nav-h:     72px;
-  --font-head: 'Josefin Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-head: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
   --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,9 +84,9 @@ button {
 /* ─── TYPOGRAPHY SCALE ────────────────────────────────────── */
 .t-display {
   font-family: var(--font-head);
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.05;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .t-head {
@@ -99,7 +99,7 @@ button {
   font-family: var(--font-head);
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-secondary);
 }
@@ -127,7 +127,7 @@ button {
 }
 
 .nav.scrolled {
-  background: rgba(244, 243, 240, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-color: var(--border);
@@ -145,8 +145,9 @@ button {
 }
 /* Logo image variant */
 .nav-logo img {
-  height: 28px;
+  height: 32px;
   width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -354,16 +355,16 @@ main { padding-top: var(--nav-h); }
 
 /* ─── HERO (HOMEPAGE) ─────────────────────────────────────── */
 .hero {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 600px;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 48px;
+  padding: 80px 56px;
   border-right: 1px solid var(--border);
 }
 
@@ -383,15 +384,15 @@ main { padding-top: var(--nav-h); }
 
 .hero-h1 {
   font-family: var(--font-head);
-  font-size: clamp(52px, 6vw, 96px);
-  font-weight: 100;
+  font-size: clamp(48px, 5.5vw, 88px);
+  font-weight: 200;
   line-height: 1.02;
-  letter-spacing: -0.01em;
-  margin-bottom: 32px;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
 }
 .hero-h1 em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .hero-sub {
@@ -439,23 +440,31 @@ main { padding-top: var(--nav-h); }
   display: block;
   color: inherit;
   transition: background 0.25s;
+  background: var(--bg);
 }
 .service-item:last-child { border-right: none; }
 .service-item:hover { background: var(--surface); }
 
+/* Ensure any nested link inherits style cleanly */
+.service-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .service-num {
   font-family: var(--font-head);
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
   margin-bottom: 18px;
 }
 
 .service-name {
   font-family: var(--font-head);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-primary);
   margin-bottom: 10px;
@@ -466,6 +475,7 @@ main { padding-top: var(--nav-h); }
   font-weight: 300;
   color: var(--text-secondary);
   line-height: 1.6;
+  max-width: 220px;
 }
 
 .service-arrow {
@@ -498,70 +508,58 @@ main { padding-top: var(--nav-h); }
 }
 
 .project-card {
-  position: relative;
-  overflow: hidden;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  aspect-ratio: 4 / 3;
   text-decoration: none;
   display: block;
-  background: #111;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  transition: background 0.2s;
 }
 .project-card:nth-child(3n) { border-right: none; }
+.project-card:hover { background: var(--surface); }
 
-.project-card img,
-.project-card video {
+.project-card-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #111;
+}
+.project-card-img img,
+.project-card-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
+  display: block;
+  transition: transform 0.55s var(--ease-out);
 }
-.project-card:hover img,
-.project-card:hover video { transform: scale(1.04); }
+.project-card:hover .project-card-img img,
+.project-card:hover .project-card-img video { transform: scale(1.04); }
 
-.project-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 55%);
-}
-
-.project-card-label {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 20px 22px;
+.project-card-info {
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border);
 }
 
 .project-card-name {
-  font-family: var(--font-head);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f0ede8;
+  color: var(--text-primary);
 }
 
 .project-card-cat {
-  font-family: var(--font-head);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: rgba(240, 237, 232, 0.6);
-  margin-top: 3px;
-}
-
-.project-card-view {
-  font-family: var(--font-head);
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(240, 237, 232, 0.55);
-  transition: color 0.2s;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-align: right;
   flex-shrink: 0;
-  margin-left: 12px;
 }
-.project-card:hover .project-card-view { color: #f0ede8; }
 
 /* CTA card (empty slot in grid) */
 .project-card-cta {
@@ -569,29 +567,29 @@ main { padding-top: var(--nav-h); }
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 32px;
+  padding: 40px 32px;
   border-right: none;
   border-bottom: 1px solid var(--border);
-  aspect-ratio: 4 / 3;
   text-decoration: none;
   background: var(--surface);
   transition: background 0.25s;
+  min-height: 200px;
 }
-.project-card-cta:hover { background: #e0ddd7; }
+.project-card-cta:hover { background: #e8e5df; }
 .project-card-cta .cta-label {
-  font-family: var(--font-head);
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 .project-card-cta .cta-text {
-  font-family: var(--font-head);
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 22px;
+  font-weight: 300;
   color: var(--text-primary);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 /* ─── ABOUT STRIP ─────────────────────────────────────────── */
@@ -637,13 +635,14 @@ main { padding-top: var(--nav-h); }
 .about-h2 {
   font-family: var(--font-head);
   font-size: clamp(30px, 3vw, 50px);
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.1;
+  letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
 .about-h2 em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 200;
 }
 .about-p {
   font-size: 15px;
@@ -667,12 +666,13 @@ main { padding-top: var(--nav-h); }
 .cta-h2 {
   font-family: var(--font-head);
   font-size: clamp(36px, 4vw, 68px);
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 .cta-h2 em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .cta-right {
@@ -1178,11 +1178,12 @@ footer {
   line-height: 1.5;
 }
 
+.footer-col h3,
 .footer-col h4 {
   font-family: var(--font-head);
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 18px;

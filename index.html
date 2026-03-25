@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ferghaus creates photorealistic 3D visuals, animations, and renders for brands that need their products to look exactly right. Based in Ayrshire, Scotland.">
-  <meta name="theme-color" content="#f4f3f0">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://ferghaus.com/">
@@ -15,11 +15,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ferghaus.com/">
   <meta property="og:image" content="https://ferghaus.com/assets/images/home/flask-beach-scene-1200.webp">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -56,177 +51,89 @@
 
   <!-- Navigation -->
   <nav class="nav" id="main-nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="/">
-          <img src="/assets/images/global/logo cut.png" alt="Ferghaus">
-        </a>
-      </div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/projects">Work</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+    <a href="/" class="nav-logo">
+      <img src="/assets/images/global/logo.svg" alt="Ferghaus">
+    </a>
+    <div class="nav-links">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/projects">Work</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact" class="btn-nav">Start a project</a>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="nav-mobile-menu" id="nav-mobile-menu">
       <a href="/">Home</a>
       <a href="/projects">Work</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
+      <a href="/contact" class="btn-nav">Start a project</a>
     </div>
   </nav>
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero -->
+
+    <!-- ① Hero -->
     <section class="hero">
       <div class="hero-left">
-        <div class="hero-eyebrow">Ayrshire, Scotland</div>
-        <h1 class="t-display">Renders that<br><em>sell</em><br>products.</h1>
+        <h1 class="hero-h1">Renders that<br><em>sell</em><br>products.</h1>
         <p class="hero-sub">Ferghaus creates photorealistic 3D visuals, animations, and renders for brands that need their products to look exactly right.</p>
         <div class="hero-ctas">
-          <a href="/projects" class="btn btn-primary">See the work</a>
-          <a href="/contact" class="btn btn-ghost">Start a project →</a>
+          <a href="/projects" class="btn-primary">See the work</a>
+          <a href="/contact" class="btn-ghost">Start a project →</a>
         </div>
       </div>
       <div class="hero-right">
         <picture>
           <source srcset="/assets/images/projects/drinks/flask-beach-scene-800.webp 800w, /assets/images/projects/drinks/flask-beach-scene-1200.webp 1200w, /assets/images/projects/drinks/flask-beach-scene-1600.webp 1600w">
-          <img src="/assets/images/projects/drinks/flask-beach-scene-1200.webp" alt="Flask product visualization on beach scene" loading="eager" fetchpriority="high">
+          <img src="/assets/images/projects/drinks/flask-beach-scene-1200.webp" alt="Flask product visualisation on beach scene" loading="eager" fetchpriority="high">
         </picture>
       </div>
     </section>
 
-    <!-- Services Strip -->
+    <!-- ② Services Strip -->
     <div class="services-strip">
-      <div class="service-item fade-up" style="--delay: 0.1s">
-        <a href="/services/3d-cad-modelling">
-          <div class="service-label">3D CAD Modelling</div>
-          <div class="service-desc">Precision 3D models from technical drawings or concepts, ready for visualization or manufacturing.</div>
-        </a>
-      </div>
-      <div class="service-item fade-up" style="--delay: 0.2s">
-        <a href="/services/product-visualisation">
-          <div class="service-label">Product Visualisation</div>
-          <div class="service-desc">Photorealistic renders that bring products to life. From single angles to complete scenes.</div>
-        </a>
-      </div>
-      <div class="service-item fade-up" style="--delay: 0.3s">
-        <a href="/services/3d-animation">
-          <div class="service-label">3D Animation</div>
-          <div class="service-desc">Cinematic animations that showcase your product. Perfect for marketing, websites, and social.</div>
-        </a>
-      </div>
-      <div class="service-item fade-up" style="--delay: 0.4s">
-        <a href="/services/ai-images-generation">
-          <div class="service-label">AI Images Generation</div>
-          <div class="service-desc">AI-powered image creation for fast ideation, concepts, and creative exploration.</div>
-        </a>
-      </div>
+      <a href="/services/3d-cad-modelling" class="service-item fade-up">
+        <div class="service-num">01</div>
+        <div class="service-name">3D CAD Modelling</div>
+        <div class="service-desc">Precision models from technical drawings or concepts, ready for visualisation or manufacturing.</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="/services/product-visualisation" class="service-item fade-up">
+        <div class="service-num">02</div>
+        <div class="service-name">Product Visualisation</div>
+        <div class="service-desc">Photorealistic renders that bring products to life. Single angles to complete scenes.</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="/services/3d-animation" class="service-item fade-up">
+        <div class="service-num">03</div>
+        <div class="service-name">3D Animation</div>
+        <div class="service-desc">Cinematic animations that showcase your product for marketing, websites, and social.</div>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="/services/ai-images-generation" class="service-item fade-up">
+        <div class="service-num">04</div>
+        <div class="service-name">AI Image Generation</div>
+        <div class="service-desc">AI-powered imagery for fast ideation, concept development, and creative exploration.</div>
+        <span class="service-arrow">→</span>
+      </a>
     </div>
 
-    <!-- Selected Projects -->
-    <section class="section-container">
-      <div class="section-header">
-        <h2>Selected projects</h2>
-        <a href="/projects" class="section-link">View all work →</a>
-      </div>
-      <div class="projects-grid">
-        <!-- Project 1: Drinks -->
-        <a href="/projects/drinks" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/drinks/coffee-tin-800.webp 800w, /assets/images/projects/drinks/coffee-tin-1200.webp 1200w, /assets/images/projects/drinks/coffee-tin-1600.webp 1600w">
-              <img src="/assets/images/projects/drinks/coffee-tin-1200.webp" alt="Drinks project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Drinks</h3>
-            <p>Product Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 2: Ion Body Armor -->
-        <a href="/projects/ion-body-armor" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
-              <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Ion Body Armor</h3>
-            <p>3D CAD & Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 3: ReUse Golf Balls -->
-        <a href="/projects/reuse-golf-balls" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-800.webp 800w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp 1200w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1600.webp 1600w">
-              <img src="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp" alt="ReUse Golf Balls project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>ReUse Golf Balls</h3>
-            <p>Product Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 4: Sorores Aromatherapy -->
-        <a href="/projects/sorores-aromatherapy" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/sorores-aromatherapy/120ml-candle-800.webp 800w, /assets/images/projects/sorores-aromatherapy/120ml-candle-1200.webp 1200w, /assets/images/projects/sorores-aromatherapy/120ml-candle-1600.webp 1600w">
-              <img src="/assets/images/projects/sorores-aromatherapy/120ml-candle-1200.webp" alt="Sorores Aromatherapy project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Sorores Aromatherapy</h3>
-            <p>Product Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 5: Vessl -->
-        <a href="/projects/vessl" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/vessl/vessl-boxes-800.webp 800w, /assets/images/projects/vessl/vessl-boxes-1200.webp 1200w, /assets/images/projects/vessl/vessl-boxes-1600.webp 1600w">
-              <img src="/assets/images/projects/vessl/vessl-boxes-1200.webp" alt="Vessl project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Vessl</h3>
-            <p>3D Animation & CGI</p>
-          </div>
-        </a>
-
-        <!-- CTA Card -->
-        <a href="/contact" class="project-card project-card-cta">
-          <div class="cta-label">Got a project in mind?</div>
-          <div class="cta-text">Start here →</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Advert / Showreel -->
+    <!-- ③ Showreel -->
     <section class="fade-up" style="border-bottom: 1px solid var(--border);">
-      <div style="padding: 52px 48px 40px; display: flex; align-items: center; justify-content: space-between;">
-        <p class="t-label">In action</p>
-        <a href="/services/3d-animation/" class="btn-ghost" style="font-family: var(--font-head); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-          3D Animation →
-        </a>
+      <div style="padding: 52px 48px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border);">
+        <p class="t-label">Showreel</p>
+        <a href="/services/3d-animation/" class="btn-ghost">3D Animation →</a>
       </div>
-      <div class="video-embed" style="border-top: 1px solid var(--border);">
+      <div class="video-embed">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/EBRvcfGIyss?rel=0"
-          title="Ferghaus — CGI Visualisation Advert"
+          src="https://www.youtube-nocookie.com/embed/nKTnxa08f-w?rel=0"
+          title="Ferghaus — CGI Visualisation Showreel"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           loading="lazy">
@@ -234,7 +141,94 @@
       </div>
     </section>
 
-    <!-- About Strip -->
+    <!-- ④ Selected Projects -->
+    <section>
+      <div class="section-header">
+        <h2 class="t-label" style="color: var(--text-primary); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: none;">Selected projects</h2>
+        <a href="/projects" class="btn-ghost">View all work →</a>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Drinks -->
+        <a href="/projects/drinks" class="project-card fade-up">
+          <div class="project-card-img">
+            <picture>
+              <source srcset="/assets/images/projects/drinks/coffee-tin-800.webp 800w, /assets/images/projects/drinks/coffee-tin-1200.webp 1200w, /assets/images/projects/drinks/coffee-tin-1600.webp 1600w">
+              <img src="/assets/images/projects/drinks/coffee-tin-1200.webp" alt="Drinks — product visualisation">
+            </picture>
+          </div>
+          <div class="project-card-info">
+            <span class="project-card-name">Drinks</span>
+            <span class="project-card-cat">Product Visualisation</span>
+          </div>
+        </a>
+
+        <!-- Ion Body Armor -->
+        <a href="/projects/ion-body-armor" class="project-card fade-up">
+          <div class="project-card-img">
+            <picture>
+              <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
+              <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor — 3D CAD & Visualisation">
+            </picture>
+          </div>
+          <div class="project-card-info">
+            <span class="project-card-name">Ion Body Armor</span>
+            <span class="project-card-cat">3D CAD & Visualisation</span>
+          </div>
+        </a>
+
+        <!-- ReUse Golf Balls -->
+        <a href="/projects/reuse-golf-balls" class="project-card fade-up">
+          <div class="project-card-img">
+            <picture>
+              <source srcset="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-800.webp 800w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp 1200w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1600.webp 1600w">
+              <img src="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp" alt="ReUse Golf Balls — product visualisation">
+            </picture>
+          </div>
+          <div class="project-card-info">
+            <span class="project-card-name">ReUse Golf Balls</span>
+            <span class="project-card-cat">Product Visualisation</span>
+          </div>
+        </a>
+
+        <!-- Sorores Aromatherapy -->
+        <a href="/projects/sorores-aromatherapy" class="project-card fade-up">
+          <div class="project-card-img">
+            <picture>
+              <source srcset="/assets/images/projects/sorores-aromatherapy/120ml-candle-800.webp 800w, /assets/images/projects/sorores-aromatherapy/120ml-candle-1200.webp 1200w, /assets/images/projects/sorores-aromatherapy/120ml-candle-1600.webp 1600w">
+              <img src="/assets/images/projects/sorores-aromatherapy/120ml-candle-1200.webp" alt="Sorores Aromatherapy — product visualisation">
+            </picture>
+          </div>
+          <div class="project-card-info">
+            <span class="project-card-name">Sorores Aromatherapy</span>
+            <span class="project-card-cat">Product Visualisation</span>
+          </div>
+        </a>
+
+        <!-- Vessl -->
+        <a href="/projects/vessl" class="project-card fade-up">
+          <div class="project-card-img">
+            <picture>
+              <source srcset="/assets/images/projects/vessl/vessl-boxes-800.webp 800w, /assets/images/projects/vessl/vessl-boxes-1200.webp 1200w, /assets/images/projects/vessl/vessl-boxes-1600.webp 1600w">
+              <img src="/assets/images/projects/vessl/vessl-boxes-1200.webp" alt="Vessl — 3D animation & CGI">
+            </picture>
+          </div>
+          <div class="project-card-info">
+            <span class="project-card-name">Vessl</span>
+            <span class="project-card-cat">3D Animation & CGI</span>
+          </div>
+        </a>
+
+        <!-- CTA Card -->
+        <a href="/contact" class="project-card project-card-cta fade-up">
+          <div class="cta-label">Got a project in mind?</div>
+          <div class="cta-text">Start here →</div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ⑤ About Strip -->
     <section class="about-strip">
       <div class="about-image">
         <picture>
@@ -243,58 +237,57 @@
         </picture>
       </div>
       <div class="about-content">
-        <div class="eyebrow">About Ferghaus</div>
-        <h2 class="t-display">One studio. Built around <em>craft.</em></h2>
-        <p>Ferghaus is the creative practice of Fergus Pottinger, a freelance 3D designer based in Ayrshire, Scotland. Every project is handled personally, from initial brief through to final delivery. We specialise in photorealistic product visualisation, 3D animation, CAD modelling, and AI-powered imagery.</p>
-        <a href="/about" class="btn btn-ghost">About Fergus →</a>
+        <div class="about-eyebrow t-label">About Ferghaus</div>
+        <h2 class="about-h2">One studio. Built around <em>craft.</em></h2>
+        <p class="about-p">Ferghaus is the creative practice of Fergus Pottinger, a freelance 3D designer based in Ayrshire, Scotland. Every project is handled personally, from initial brief through to final delivery.</p>
+        <a href="/about" class="btn-ghost">About Fergus →</a>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- ⑥ CTA Section -->
     <section class="cta-section">
-      <h2 class="t-display">Got a product that needs to look its best?</h2>
-      <p>Let's work together. Get in touch to discuss your project, timeline, and budget.</p>
-      <div class="cta-actions">
-        <a href="/contact" class="btn btn-primary">Start a project</a>
-        <a href="mailto:hello@ferghaus.com" class="cta-email">hello@ferghaus.com</a>
+      <h2 class="cta-h2">Got a product that needs to look its best?</h2>
+      <div class="cta-right">
+        <p class="cta-p">Get in touch to discuss your project, timeline, and budget. Every brief is welcome — from single renders to full campaign assets.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn-primary">Start a project</a>
+          <a href="mailto:hello@ferghaus.com" class="cta-email">hello@ferghaus.com</a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <img src="/assets/images/global/logo cut.png" alt="Ferghaus">
-          </div>
-          <p>Creative CGI Visualisation<br>Ayrshire, Scotland</p>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Work</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Follow</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/Ferghaus/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="https://www.facebook.com/Ferghaus/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="https://www.youtube.com/@Ferghausltd" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        </ul>
-      </div>
+  <footer>
+    <div class="footer-brand">
+      <a href="/">
+        <img src="/assets/images/global/logo.svg" alt="Ferghaus" style="height: 28px; width: auto; margin-bottom: 12px;">
+      </a>
+      <p class="footer-tagline">Creative CGI Visualisation<br>Ayrshire, Scotland</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Ferghaus. All rights reserved.</p>
-      <p>Ayrshire, Scotland</p>
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Work</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/Ferghaus/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/Ferghaus/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://www.youtube.com/@Ferghausltd" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      </ul>
     </div>
   </footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 Ferghaus. All rights reserved.</span>
+    <span class="footer-location">Ayrshire, Scotland</span>
+  </div>
 
   <!-- Scripts -->
   <script src="/assets/js/main.js"></script>
