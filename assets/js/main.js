@@ -102,6 +102,23 @@
     loops.forEach(video => videoObserver.observe(video));
   }
 
+  /* ─── VIDEO POSTER: click-to-play ────────────────────── */
+  const videoPoster = document.getElementById('showreelPoster');
+  if (videoPoster) {
+    const activate = () => {
+      const vid = videoPoster.dataset.vid;
+      videoPoster.classList.add('playing');
+      videoPoster.innerHTML =
+        '<iframe src="https://www.youtube-nocookie.com/embed/' + vid +
+        '?autoplay=1&rel=0&modestbranding=1&color=white&iv_load_policy=3"' +
+        ' title="Ferghaus Showreel"' +
+        ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+        ' allowfullscreen></iframe>';
+    };
+    videoPoster.addEventListener('click', activate);
+    videoPoster.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') activate(); });
+  }
+
   /* ─── ACTIVE NAV LINK ─────────────────────────────────── */
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-links a, .nav-mobile-menu a').forEach(link => {
