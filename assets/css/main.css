@@ -624,6 +624,10 @@ main { padding-top: var(--nav-h); }
 .project-card--featured {
   grid-column: span 2;
 }
+/* Featured card: wider so 16:9 is less tall, reducing row height */
+.projects-grid--immersive .project-card--featured .project-card-img {
+  aspect-ratio: 16 / 9;
+}
 
 /* Taller 3:2 images for immersive grid */
 .projects-grid--immersive .project-card-img {
