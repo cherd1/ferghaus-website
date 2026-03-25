@@ -516,6 +516,7 @@ main { padding-top: var(--nav-h); }
   display: block;
   background: var(--bg);
   overflow: hidden;
+  padding: 12px 12px 0;
   transition: background 0.2s;
 }
 .project-card:hover { background: var(--surface); }
@@ -537,7 +538,7 @@ main { padding-top: var(--nav-h); }
 .project-card:hover .project-card-img video { transform: scale(1.04); }
 
 .project-card-info {
-  padding: 18px 24px;
+  padding: 16px 4px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -568,7 +569,7 @@ main { padding-top: var(--nav-h); }
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 32px;
+  padding: 40px 32px !important; /* override the card image padding */
   border-right: none;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
@@ -606,10 +607,16 @@ main { padding-top: var(--nav-h); }
   overflow: hidden;
   border-right: 1px solid var(--border);
   min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 56px;
+  background: var(--surface);
 }
 .about-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   object-position: center top;
 }
