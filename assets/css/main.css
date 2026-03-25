@@ -525,6 +525,7 @@ main { padding-top: var(--nav-h); }
 .project-card:hover { background: var(--surface); }
 
 .project-card-img {
+  position: relative; /* needed for overlay */
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #111;
@@ -574,6 +575,70 @@ main { padding-top: var(--nav-h); }
   line-height: 1.65;
   padding: 14px 4px 18px;
   border-top: 1px solid var(--border);
+}
+
+/* ─── IMMERSIVE PROJECTS GRID (full projects page) ───────────── */
+.projects-grid--immersive {
+  gap: 20px;
+  background: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 40px 48px 72px;
+}
+
+.projects-grid--immersive .project-card {
+  padding: 0;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s, background 0.2s;
+}
+.projects-grid--immersive .project-card:hover {
+  background: var(--bg);
+  border-color: var(--border-mid);
+}
+
+/* Featured card spans two columns */
+.project-card--featured {
+  grid-column: span 2;
+}
+
+/* Taller 3:2 images for immersive grid */
+.projects-grid--immersive .project-card-img {
+  aspect-ratio: 3 / 2;
+  border: none;
+}
+
+/* Info bar sits flush inside the card border */
+.projects-grid--immersive .project-card-info {
+  padding: 18px 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* Hover description overlay */
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.84) 0%,
+    rgba(10, 10, 10, 0.28) 52%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out);
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  pointer-events: none;
+}
+.project-card:hover .project-card-overlay { opacity: 1; }
+
+.project-card-overlay-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
 }
 
 /* CTA card (empty slot in grid) */
