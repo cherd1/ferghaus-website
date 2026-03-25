@@ -357,7 +357,8 @@ main { padding-top: var(--nav-h); }
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 600px;
+  max-height: 72vh;
+  overflow: hidden;
 }
 
 .hero-left {
@@ -504,19 +505,19 @@ main { padding-top: var(--nav-h); }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .project-card {
   text-decoration: none;
   display: block;
   background: var(--bg);
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
   overflow: hidden;
   transition: background 0.2s;
 }
-.project-card:nth-child(3n) { border-right: none; }
 .project-card:hover { background: var(--surface); }
 
 .project-card-img {
@@ -536,18 +537,18 @@ main { padding-top: var(--nav-h); }
 .project-card:hover .project-card-img video { transform: scale(1.04); }
 
 .project-card-info {
-  padding: 16px 20px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   border-top: 1px solid var(--border);
 }
 
 .project-card-name {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-primary);
 }
