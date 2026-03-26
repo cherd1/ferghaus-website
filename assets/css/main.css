@@ -1095,17 +1095,34 @@ main { padding-top: var(--nav-h); }
 /* ─── PROJECT HERO ────────────────────────────────────────── */
 .project-hero {
   width: 100%;
-  height: 65vh;
-  min-height: 400px;
-  overflow: hidden;
+  padding: 40px 48px;
+  background: var(--bg);
   position: relative;
-  background: #111;
 }
-.project-hero img,
-.project-hero video {
+
+.project-hero picture {
+  display: block;
+  height: 60vh;
+  min-height: 360px;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+
+.project-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.project-hero video {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  min-height: 260px;
+  object-fit: cover;
+  background: #111;
 }
 
 /* ─── PROJECT META ────────────────────────────────────────── */
@@ -1558,7 +1575,9 @@ footer {
 
   .project-meta { flex-wrap: wrap; }
   .project-meta-item { flex: 1 1 50%; }
-  .project-hero { height: 50vh; }
+  .project-hero { padding: 24px 24px 28px; }
+  .project-hero picture { height: 48vh; min-height: 280px; }
+  .project-hero video { height: 34vh; min-height: 220px; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item:nth-child(3n) { border-right: 1px solid var(--border); }
