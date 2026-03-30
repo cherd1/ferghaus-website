@@ -1118,6 +1118,14 @@ main { padding-top: var(--nav-h); }
   display: block;
 }
 
+/* Light variant: white background, image contained (not cropped) */
+.project-hero--light picture {
+  background: #fff;
+}
+.project-hero--light img {
+  object-fit: contain;
+}
+
 .project-hero video {
   display: block;
   width: 100%;
