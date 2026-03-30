@@ -1097,7 +1097,6 @@ main { padding-top: var(--nav-h); }
 /* ─── PROJECT HERO ────────────────────────────────────────── */
 .project-hero {
   width: 100%;
-  padding: 40px 48px;
   background: var(--bg);
   position: relative;
 }
@@ -1118,9 +1117,12 @@ main { padding-top: var(--nav-h); }
   display: block;
 }
 
-/* Light variant: white background, image contained (not cropped) */
+/* Light variant: white background, image contained (not cropped).
+   Shorter height so wide landscape images fill the frame well. */
 .project-hero--light picture {
   background: #fff;
+  height: 44vh;
+  min-height: 260px;
 }
 .project-hero--light img {
   object-fit: contain;
@@ -1585,8 +1587,8 @@ footer {
 
   .project-meta { flex-wrap: wrap; }
   .project-meta-item { flex: 1 1 50%; }
-  .project-hero { padding: 24px 24px 28px; }
   .project-hero picture { height: 48vh; min-height: 280px; }
+  .project-hero--light picture { height: 36vh; min-height: 200px; }
   .project-hero video { height: 34vh; min-height: 220px; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
