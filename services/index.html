@@ -66,23 +66,20 @@
 
   <!-- Navigation -->
   <nav class="nav" id="main-nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="/">
-          <img src="/assets/images/global/logo.svg" alt="Ferghaus">
-        </a>
-      </div>
-      <div class="nav-links">
+    <a class="nav-logo" href="/">
+      <img src="/assets/images/global/logo.svg" alt="Ferghaus">
+    </a>
+    <div class="nav-links">
       <a href="/projects">Projects</a>
-      <a href="/services">Services</a>
+      <a href="/services" aria-current="page">Services</a>
       <a href="/about">About</a>
       <a href="/contact" class="btn-nav">Start a project</a>
     </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="nav-mobile-menu" id="nav-mobile-menu">
       <a href="/projects">Projects</a>
       <a href="/services">Services</a>
@@ -93,77 +90,76 @@
 
   <!-- Main Content -->
   <main id="main-content">
+
     <!-- Page Header -->
     <section class="page-header">
-      <div class="page-header-content">
-        <div class="eyebrow">What we do</div>
-        <h1 class="t-display">Built to make products look their best.</h1>
-        <p class="page-sub">Four disciplines. One studio.</p>
-      </div>
+      <div class="eyebrow">What we do</div>
+      <h1>Built to make products look their best.</h1>
+      <p class="sub">Four disciplines. One studio. Every project handled from model to final render.</p>
     </section>
 
-    <!-- Service Row 1: 3D CAD Modelling -->
+    <!-- Service Row 1: 3D CAD Modelling — Copy left, Image right -->
     <section class="service-row fade-up">
-      <div class="service-content">
-        <div class="service-label t-label">Service 01</div>
+      <div class="service-row-content">
+        <div class="t-label">Service 01</div>
         <h2>3D CAD Modelling</h2>
-        <p>Precision 3D CAD models built from scratch or from your technical drawings. Engineering-grade geometry that works seamlessly in product development, manufacturing prep, and photorealistic visualisation.</p>
-        <p>Whether you're moving from 2D sketches to 3D or need to refine existing designs, we handle complex geometry with exacting standards. Every model is built to specification and ready for your next step.</p>
+        <p>Precision 3D models built from scratch or from your technical drawings. Engineering-grade geometry that works in product development, manufacturing prep, and photorealistic visualisation.</p>
+        <p>Whether you're moving from 2D sketches to 3D or need to refine an existing design, we handle complex geometry with exacting standards. Every model is built to specification and ready for your next step.</p>
         <div class="who-tags">
-          <span class="tag">Product Designers</span>
-          <span class="tag">Engineers</span>
-          <span class="tag">Manufacturers</span>
-          <span class="tag">Studios</span>
+          <span class="who-tag">Product Designers</span>
+          <span class="who-tag">Engineers</span>
+          <span class="who-tag">Manufacturers</span>
+          <span class="who-tag">Studios</span>
         </div>
-        <a href="/services/3d-cad-modelling" class="btn btn-primary">Explore CAD Modelling</a>
+        <a href="/services/3d-cad-modelling" class="btn-primary">Explore CAD Modelling</a>
       </div>
-      <div class="service-image">
+      <div class="service-row-image">
         <picture>
           <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
-          <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="3D CAD modelling example" loading="lazy">
+          <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor 3D CAD modelling example" loading="lazy">
         </picture>
       </div>
     </section>
 
-    <!-- Service Row 2: Product Visualisation -->
+    <!-- Service Row 2: Product Visualisation — Image left, Copy right -->
     <section class="service-row reverse fade-up">
-      <div class="service-image">
+      <div class="service-row-content">
+        <div class="t-label">Service 02</div>
+        <h2>Product Visualisation</h2>
+        <p>Studio-quality photorealistic renders without the cost or logistics of a physical shoot. We create CGI visuals that bring your products to life in any context, from clean studio shots to immersive lifestyle scenes.</p>
+        <p>Perfect for e-commerce, marketing campaigns, packaging mockups, and brand guidelines. Unlimited variations, impossible angles, and complete creative control over every render.</p>
+        <div class="who-tags">
+          <span class="who-tag">E-Commerce</span>
+          <span class="who-tag">Marketing Teams</span>
+          <span class="who-tag">Brands</span>
+          <span class="who-tag">Agencies</span>
+        </div>
+        <a href="/services/product-visualisation" class="btn-primary">Explore Visualisation</a>
+      </div>
+      <div class="service-row-image">
         <picture>
           <source srcset="/assets/images/projects/drinks/coffee-tin-800.webp 800w, /assets/images/projects/drinks/coffee-tin-1200.webp 1200w, /assets/images/projects/drinks/coffee-tin-1600.webp 1600w">
           <img src="/assets/images/projects/drinks/coffee-tin-1200.webp" alt="Product visualisation example" loading="lazy">
         </picture>
       </div>
-      <div class="service-content">
-        <div class="service-label t-label">Service 02</div>
-        <h2>Product Visualisation</h2>
-        <p>Studio-quality photorealistic product renders without the cost or time of physical photography. We create CGI visuals that bring your products to life in any context, from clean white studio shots to immersive lifestyle scenes.</p>
-        <p>Perfect for e-commerce, marketing campaigns, packaging mockups, and brand guidelines. Get unlimited variations, impossible angles, and complete creative control over every render.</p>
-        <div class="who-tags">
-          <span class="tag">E-Commerce</span>
-          <span class="tag">Marketing Teams</span>
-          <span class="tag">Brands</span>
-          <span class="tag">Agencies</span>
-        </div>
-        <a href="/services/product-visualisation" class="btn btn-primary">Explore Visualisation</a>
-      </div>
     </section>
 
-    <!-- Service Row 3: 3D Animation -->
+    <!-- Service Row 3: 3D Animation — Copy left, Image right -->
     <section class="service-row fade-up">
-      <div class="service-content">
-        <div class="service-label t-label">Service 03</div>
+      <div class="service-row-content">
+        <div class="t-label">Service 03</div>
         <h2>3D Animation</h2>
-        <p>Cinematic animations that make products impossible to ignore. Product reveals, exploded views, transformations, and motion content built entirely in 3D. Perfect for product launches, crowdfunding campaigns, and social media content.</p>
+        <p>Cinematic product animations that make what you've built impossible to ignore. Product reveals, exploded views, transformations, and motion content built entirely in 3D for product launches, crowdfunding campaigns, and social media.</p>
         <p>We handle everything from concept through to final delivery, whether that's a short-form loop for Instagram or a full campaign sequence. Every animation is crafted to showcase your product's best features.</p>
         <div class="who-tags">
-          <span class="tag">Product Launches</span>
-          <span class="tag">Crowdfunding</span>
-          <span class="tag">Social Media</span>
-          <span class="tag">Campaigns</span>
+          <span class="who-tag">Product Launches</span>
+          <span class="who-tag">Crowdfunding</span>
+          <span class="who-tag">Social Media</span>
+          <span class="who-tag">Campaigns</span>
         </div>
-        <a href="/services/3d-animation" class="btn btn-primary">Explore Animation</a>
+        <a href="/services/3d-animation" class="btn-primary">Explore Animation</a>
       </div>
-      <div class="service-image">
+      <div class="service-row-image">
         <picture>
           <source srcset="/assets/images/projects/reuse-golf-balls/golf-ball-scenes-800.webp 800w, /assets/images/projects/reuse-golf-balls/golf-ball-scenes-1200.webp 1200w, /assets/images/projects/reuse-golf-balls/golf-ball-scenes-1600.webp 1600w">
           <img src="/assets/images/projects/reuse-golf-balls/golf-ball-scenes-1200.webp" alt="3D animation example" loading="lazy">
@@ -171,37 +167,41 @@
       </div>
     </section>
 
-    <!-- Service Row 4: AI Image Generation -->
+    <!-- Service Row 4: AI Image Generation — Image left, Copy right -->
     <section class="service-row reverse fade-up">
-      <div class="service-image">
+      <div class="service-row-content">
+        <div class="t-label">Service 04</div>
+        <h2>AI Image Generation</h2>
+        <p>Fast, art-directed AI imagery built on real CGI expertise. Not generic prompts. We use AI as a creative tool to generate concept imagery, campaign variations, and brand content that is intentional and production-ready.</p>
+        <p>Perfect for quick ideation, exploring creative directions, or generating variations on a theme. All output is guided by professional design principles and your specific creative brief.</p>
+        <div class="who-tags">
+          <span class="who-tag">Creative Teams</span>
+          <span class="who-tag">Concept Exploration</span>
+          <span class="who-tag">Campaigns</span>
+          <span class="who-tag">Agencies</span>
+        </div>
+        <a href="/services/ai-images-generation" class="btn-primary">Explore AI Imagery</a>
+      </div>
+      <div class="service-row-image">
         <picture>
           <source srcset="/assets/images/about/guspottingeracharactercalleddesignherowhoisasuperhero1181ff7c-55bf-45b6-93df-2b29d1673a15-800.webp 800w, /assets/images/about/guspottingeracharactercalleddesignherowhoisasuperhero1181ff7c-55bf-45b6-93df-2b29d1673a15-1200.webp 1200w, /assets/images/about/guspottingeracharactercalleddesignherowhoisasuperhero1181ff7c-55bf-45b6-93df-2b29d1673a15-1600.webp 1600w">
           <img src="/assets/images/about/guspottingeracharactercalleddesignherowhoisasuperhero1181ff7c-55bf-45b6-93df-2b29d1673a15-1200.webp" alt="AI image generation example" loading="lazy">
         </picture>
       </div>
-      <div class="service-content">
-        <div class="service-label t-label">Service 04</div>
-        <h2>AI Image Generation</h2>
-        <p>Fast, art-directed AI imagery built on real CGI expertise. Not generic prompts. We use AI as a creative tool to generate concept imagery, campaign variations, and brand content that's intentional and production-ready.</p>
-        <p>Perfect for quick ideation, exploring creative directions, or generating variations on a theme. All output is guided by professional design principles and your specific creative brief.</p>
-        <div class="who-tags">
-          <span class="tag">Creative Teams</span>
-          <span class="tag">Concept Exploration</span>
-          <span class="tag">Campaigns</span>
-          <span class="tag">Agencies</span>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-up">
+      <h2 class="cta-h2">Not sure which service fits?</h2>
+      <div class="cta-right">
+        <p class="cta-p">Every project is different. Let's talk through your needs, timeline, and goals. We'll recommend the right approach to make your product look its best.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn-primary">Start a project</a>
+          <a href="mailto:hello@ferghaus.com" class="cta-email">hello@ferghaus.com</a>
         </div>
-        <a href="/services/ai-images-generation" class="btn btn-primary">Explore AI Imagery</a>
       </div>
     </section>
 
-    <!-- CTA Strip -->
-    <section class="info-strip fade-up">
-      <div class="info-content">
-        <h2>Not sure which service fits?</h2>
-        <p>Every project is unique. Let's chat about your needs, timeline, and budget. We'll recommend the right approach to make your product look its absolute best.</p>
-        <a href="/contact" class="btn btn-primary">Start a project</a>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -233,7 +233,9 @@
   <div class="footer-bottom">
     <span class="footer-copy">&copy; 2026 Ferghaus. All rights reserved.</span>
     <span class="footer-location">Ayrshire, Scotland</span>
-  </div><!-- Scripts -->
+  </div>
+
+  <!-- Scripts -->
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

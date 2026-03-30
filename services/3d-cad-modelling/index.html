@@ -43,23 +43,20 @@
 
   <!-- Navigation -->
   <nav class="nav" id="main-nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="/">
-          <img src="/assets/images/global/logo.svg" alt="Ferghaus">
-        </a>
-      </div>
-      <div class="nav-links">
+    <a class="nav-logo" href="/">
+      <img src="/assets/images/global/logo.svg" alt="Ferghaus">
+    </a>
+    <div class="nav-links">
       <a href="/projects">Projects</a>
-      <a href="/services">Services</a>
+      <a href="/services" aria-current="page">Services</a>
       <a href="/about">About</a>
       <a href="/contact" class="btn-nav">Start a project</a>
     </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="nav-mobile-menu" id="nav-mobile-menu">
       <a href="/projects">Projects</a>
       <a href="/services">Services</a>
@@ -70,132 +67,132 @@
 
   <!-- Main Content -->
   <main id="main-content">
+
     <!-- Page Header -->
     <section class="page-header">
-      <div class="page-header-content">
-        <div class="breadcrumb">
-          <a href="/services">Services</a> → 3D CAD Modelling
-        </div>
-        <h1 class="t-display">3D CAD Modelling</h1>
-        <p class="page-sub"><em>From concept geometry to production-ready models.</em></p>
+      <div class="breadcrumb">
+        <a href="/services">Services</a> / <span>3D CAD Modelling</span>
       </div>
+      <h1>3D CAD Modelling</h1>
+      <p class="sub">From concept sketches to production-ready geometry, built to specification.</p>
     </section>
 
-    <!-- Intro Split -->
+    <!-- Section 1: Copy left, Image right -->
     <section class="project-split fade-up">
-      <div class="project-text">
-        <p>3D CAD modelling is the foundation of modern product development. Whether you're working from sketches, 2D technical drawings, or concept images, we create precise 3D geometry that works exactly how you need it.</p>
-        <p>Our models are engineering-grade, fully parametric where required, and ready for manufacturing, further visualization, animation, or whatever comes next in your workflow. Every dimension, edge, and surface is handled with exacting standards.</p>
+      <div class="project-split-content">
+        <h2>The foundation everything else is built on.</h2>
+        <p>3D CAD modelling is where every project starts. Whether you're working from hand sketches, 2D technical drawings, or reference images, we create precise 3D geometry that works exactly how you need it.</p>
+        <p>Our models are engineering-grade, fully parametric where required, and ready for the next step in your workflow, be that manufacturing, photorealistic renders, animations, or structural analysis. Every dimension, edge, and surface is handled with exacting care.</p>
       </div>
-      <div class="project-image">
+      <div class="project-split-image">
         <picture>
           <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
-          <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="CAD modelling work example" loading="lazy">
+          <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor 3D CAD model" loading="lazy">
         </picture>
       </div>
     </section>
 
-    <!-- Use Cases -->
-    <section class="info-strip fade-up">
-      <div class="info-grid-3">
-        <div class="info-cell">
-          <h3>Product Development</h3>
-          <p>Build 3D geometry from concept to final design. Perfect for iterating designs quickly and exploring multiple directions before manufacturing.</p>
+    <!-- Section 2: Image left, Copy right -->
+    <section class="service-row reverse fade-up">
+      <div class="service-row-content">
+        <h3 class="t-label">What you get</h3>
+        <h2>Geometry that moves your project forward.</h2>
+        <p>A good CAD model is more than a visual. It's the technical backbone that downstream work depends on. We build models that are clean, accurate, and structured so your engineering, visualisation, or manufacturing team can pick up exactly where we leave off.</p>
+        <p>We handle consumer products, packaging, wearables, hardware, and custom components. If it can be drawn, it can be modelled.</p>
+        <div class="who-tags">
+          <span class="who-tag">Product Designers</span>
+          <span class="who-tag">Engineers</span>
+          <span class="who-tag">Manufacturers</span>
+          <span class="who-tag">Studios</span>
         </div>
-        <div class="info-cell">
-          <h3>Manufacturing Prep</h3>
-          <p>Convert technical drawings to CAD models ready for CNC, injection moulding, or other manufacturing processes. Production-grade accuracy.</p>
-        </div>
-        <div class="info-cell">
-          <h3>Visualisation Input</h3>
-          <p>Use as the foundation for photorealistic renders, animations, and other visual outputs. Clean topology optimized for rendering engines.</p>
-        </div>
+      </div>
+      <div class="service-row-image">
+        <picture>
+          <source srcset="/assets/images/projects/vessl/vessl-shelf-website-non-branded-2-800.webp 800w, /assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1200.webp 1200w, /assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1600.webp 1600w">
+          <img src="/assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1200.webp" alt="Vessl product 3D model shelf display" loading="lazy">
+        </picture>
       </div>
     </section>
 
     <!-- Process Steps -->
     <section class="process-strip fade-up">
       <div class="process-step">
-        <div class="process-number">01</div>
-        <h3>Brief</h3>
-        <p>Gather requirements, technical specifications, reference materials, and any existing drawings or sketches.</p>
+        <div class="process-num">01</div>
+        <div class="process-title">Brief</div>
+        <p class="process-desc">Gather requirements, technical specs, reference materials, and any existing drawings or sketches.</p>
       </div>
       <div class="process-step">
-        <div class="process-number">02</div>
-        <h3>Build</h3>
-        <p>Create precision 3D geometry using industry-standard CAD software. Fully parametric models where needed.</p>
+        <div class="process-num">02</div>
+        <div class="process-title">Build</div>
+        <p class="process-desc">Create precision 3D geometry using industry-standard software. Fully parametric models where needed.</p>
       </div>
       <div class="process-step">
-        <div class="process-number">03</div>
-        <h3>Review</h3>
-        <p>Iterate based on your feedback. Check dimensions, tolerances, and geometry against specifications.</p>
+        <div class="process-num">03</div>
+        <div class="process-title">Review</div>
+        <p class="process-desc">Iterate based on your feedback. Check dimensions, tolerances, and geometry against specification.</p>
       </div>
       <div class="process-step">
-        <div class="process-number">04</div>
-        <h3>Deliver</h3>
-        <p>Final model files in your preferred format (STEP, IGES, STL, OBJ, or others) with documentation.</p>
+        <div class="process-num">04</div>
+        <div class="process-title">Deliver</div>
+        <p class="process-desc">Final model files in your preferred format, STEP, IGES, STL, OBJ, or others, with full documentation.</p>
       </div>
     </section>
 
     <!-- Related Projects -->
-    <section class="section-container fade-up">
-      <div class="section-header">
-        <h2>Work built on CAD</h2>
-      </div>
-      <div class="projects-grid">
-        <!-- Project 1: Ion Body Armor -->
-        <a href="/projects/ion-body-armor" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
-              <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Ion Body Armor</h3>
-            <p>3D CAD & Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 2: ReUse Golf Balls -->
-        <a href="/projects/reuse-golf-balls" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-800.webp 800w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp 1200w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1600.webp 1600w">
-              <img src="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp" alt="ReUse Golf Balls project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>ReUse Golf Balls</h3>
-            <p>Product Visualisation</p>
-          </div>
-        </a>
-
-        <!-- Project 3: Vessl -->
-        <a href="/projects/vessl" class="project-card">
-          <div class="project-image">
-            <picture>
-              <source srcset="/assets/images/projects/vessl/vessl-boxes-800.webp 800w, /assets/images/projects/vessl/vessl-boxes-1200.webp 1200w, /assets/images/projects/vessl/vessl-boxes-1600.webp 1600w">
-              <img src="/assets/images/projects/vessl/vessl-boxes-1200.webp" alt="Vessl project">
-            </picture>
-          </div>
-          <div class="project-meta">
-            <h3>Vessl</h3>
-            <p>3D Animation & CGI</p>
-          </div>
-        </a>
-      </div>
-    </section>
+    <div class="section-header">
+      <h2>Work built on CAD</h2>
+    </div>
+    <div class="projects-grid">
+      <a href="/projects/ion-body-armor" class="project-card">
+        <div class="project-card-img">
+          <picture>
+            <source srcset="/assets/images/projects/ion-body-armor/ion-body-armour-band-800.webp 800w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp 1200w, /assets/images/projects/ion-body-armor/ion-body-armour-band-1600.webp 1600w">
+            <img src="/assets/images/projects/ion-body-armor/ion-body-armour-band-1200.webp" alt="Ion Body Armor project">
+          </picture>
+        </div>
+        <div class="project-card-info">
+          <span class="project-card-name">Ion Body Armor</span>
+          <span class="project-card-cat">3D CAD and Visualisation</span>
+        </div>
+      </a>
+      <a href="/projects/vessl" class="project-card">
+        <div class="project-card-img">
+          <picture>
+            <source srcset="/assets/images/projects/vessl/vessl-shelf-website-non-branded-2-800.webp 800w, /assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1200.webp 1200w, /assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1600.webp 1600w">
+            <img src="/assets/images/projects/vessl/vessl-shelf-website-non-branded-2-1200.webp" alt="Vessl project">
+          </picture>
+        </div>
+        <div class="project-card-info">
+          <span class="project-card-name">Vessl</span>
+          <span class="project-card-cat">3D Animation and CGI</span>
+        </div>
+      </a>
+      <a href="/projects/reuse-golf-balls" class="project-card">
+        <div class="project-card-img">
+          <picture>
+            <source srcset="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-800.webp 800w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp 1200w, /assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1600.webp 1600w">
+            <img src="/assets/images/projects/reuse-golf-balls/reuse-golf-balls-packaging-1200.webp" alt="ReUse Golf Balls project">
+          </picture>
+        </div>
+        <div class="project-card-info">
+          <span class="project-card-name">ReUse Golf Balls</span>
+          <span class="project-card-cat">Product Visualisation</span>
+        </div>
+      </a>
+    </div>
 
     <!-- CTA Section -->
     <section class="cta-section fade-up">
-      <h2 class="t-display">Ready to turn your design into 3D?</h2>
-      <p>Let's talk about your project. Share your brief, drawings, and timeline. We'll work through the process together.</p>
-      <div class="cta-actions">
-        <a href="/contact" class="btn btn-primary">Start a project</a>
-        <a href="mailto:hello@ferghaus.com" class="cta-email">hello@ferghaus.com</a>
+      <h2 class="cta-h2">Ready to turn your design into 3D?</h2>
+      <div class="cta-right">
+        <p class="cta-p">Share your brief, drawings, or reference images and we'll work through the process together.</p>
+        <div class="cta-actions">
+          <a href="/contact" class="btn-primary">Start a project</a>
+          <a href="mailto:hello@ferghaus.com" class="cta-email">hello@ferghaus.com</a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -227,7 +224,9 @@
   <div class="footer-bottom">
     <span class="footer-copy">&copy; 2026 Ferghaus. All rights reserved.</span>
     <span class="footer-location">Ayrshire, Scotland</span>
-  </div><!-- Scripts -->
+  </div>
+
+  <!-- Scripts -->
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
