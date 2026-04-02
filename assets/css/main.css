@@ -1294,7 +1294,7 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
-  padding: 0 48px;
+  padding: 0 48px 32px;
 }
 .project-split-content {
   padding: 28px 32px;
@@ -1656,7 +1656,7 @@ footer {
   .service-row-content { padding: 48px 32px; border-left: none; border-top: 1px solid var(--border); }
   .service-row.reverse .service-row-content { border-right: none; border-top: 1px solid var(--border); }
 
-  .project-split { grid-template-columns: 1fr; padding: 0 32px; }
+  .project-split { grid-template-columns: 1fr; padding: 0 32px 24px; }
   .project-split-content { border-bottom: 1px solid var(--border); padding: 24px 24px; }
   .project-split-image { min-height: 360px; }
 
@@ -1722,7 +1722,7 @@ footer {
 
   .service-row-content { padding: 40px 20px; }
 
-  .project-split { padding: 0 20px; }
+  .project-split { padding: 0 20px 20px; }
   .project-split-content { padding: 20px 16px; }
 
   .contact-info { padding: 44px 20px; }
