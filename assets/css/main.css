@@ -1126,7 +1126,6 @@ main { padding-top: var(--nav-h); }
 }
 .project-image-full {
   background: var(--bg);
-  padding: 8px;
   line-height: 0;
 }
 .project-image-full img,
@@ -1193,6 +1192,10 @@ main { padding-top: var(--nav-h); }
   min-height: 480px;
   overflow: hidden;
   background: #111;
+}
+.project-hero-overlay--sm {
+  height: 56vh;
+  min-height: 380px;
 }
 .project-hero-overlay picture {
   display: block;
