@@ -1194,10 +1194,10 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
+  padding: 0 48px;
 }
 .project-split-content {
-  padding: 48px 48px;
-  border-right: 1px solid var(--border);
+  padding: 48px 32px;
 }
 .project-split-content h2 {
   font-family: var(--font-head);
@@ -1554,8 +1554,8 @@ footer {
   .service-row-content { padding: 48px 32px; border-left: none; border-top: 1px solid var(--border); }
   .service-row.reverse .service-row-content { border-right: none; border-top: 1px solid var(--border); }
 
-  .project-split { grid-template-columns: 1fr; }
-  .project-split-content { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 32px; }
+  .project-split { grid-template-columns: 1fr; padding: 0 32px; }
+  .project-split-content { border-bottom: 1px solid var(--border); padding: 40px 24px; }
   .project-split-image { min-height: 360px; }
 
   .contact-grid { grid-template-columns: 1fr; }
@@ -1617,7 +1617,8 @@ footer {
 
   .service-row-content { padding: 40px 20px; }
 
-  .project-split-content { padding: 40px 20px; }
+  .project-split { padding: 0 20px; }
+  .project-split-content { padding: 36px 16px; }
 
   .contact-info { padding: 44px 20px; }
   .contact-form-wrap { padding: 44px 20px; }
