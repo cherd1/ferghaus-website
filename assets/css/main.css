@@ -547,6 +547,15 @@ main { padding-top: var(--nav-h); }
   justify-content: space-between;
   padding: 36px 48px 28px;
 }
+.section-header-label {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  text-transform: none;
+}
+.section-border-bottom { border-bottom: 1px solid var(--border); }
 
 /* ─── PROJECT GRID ────────────────────────────────────────── */
 .projects-grid {
@@ -788,6 +797,19 @@ main { padding-top: var(--nav-h); }
   max-width: 440px;
   margin-bottom: 36px;
 }
+.about-role {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+.about-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+.about-p--last { margin-bottom: 32px; }
 
 /* ─── CTA SECTION ─────────────────────────────────────────── */
 .cta-section {
@@ -1551,6 +1573,11 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+.footer-brand img {
+  height: 28px;
+  width: auto;
+  margin-bottom: 12px;
+}
 .footer-brand a {
   display: block;
   font-family: var(--font-head);
