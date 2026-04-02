@@ -955,6 +955,14 @@ main { padding-top: var(--nav-h); }
   padding: 64px 48px;
   border-left: 1px solid var(--border);
 }
+.service-row-content h2 {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 2.2vw, 34px);
+  font-weight: 200;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
 .service-row.reverse .service-row-content {
   border-left: none;
   border-right: 1px solid var(--border);
