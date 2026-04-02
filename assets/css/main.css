@@ -1127,12 +1127,20 @@ main { padding-top: var(--nav-h); }
 .project-image-full {
   background: var(--bg);
   line-height: 0;
+  overflow: hidden;
 }
 .project-image-full img,
 .project-image-full video {
   width: 100%;
-  height: auto;
+  max-height: 68vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
+}
+/* Pair images are half-width so don't need as much height */
+.project-image-pair .project-image-full img,
+.project-image-pair .project-image-full video {
+  max-height: 52vh;
 }
 .project-image-pair {
   display: grid;
