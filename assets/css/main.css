@@ -13,7 +13,8 @@
   --text-secondary: #6e6e73;
   --text-muted:     #aeaeb2;
 
-  --nav-h:     72px;
+  --nav-h:          72px;
+  --page-margin:    48px;   /* desktop — 32px tablet, 20px mobile */
   --font-head: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
@@ -392,7 +393,7 @@ main { padding-top: var(--nav-h); }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: clamp(36px, 5vh, 56px) 56px 64px;
+  padding: clamp(36px, 5vh, 56px) 48px 64px;
 }
 
 .hero-eyebrow {
@@ -472,6 +473,9 @@ main { padding-top: var(--nav-h); }
   background: var(--bg);
 }
 .service-item:last-child { border-right: none; }
+.service-item:first-child { padding-left: 48px; }
+.service-item:last-child  { padding-right: 48px; }
+.service-item:last-child .service-arrow { right: 48px; }
 .service-item:hover { background: var(--surface); }
 
 /* Ensure any nested link inherits style cleanly */
@@ -520,6 +524,16 @@ main { padding-top: var(--nav-h); }
   transform: translateX(5px);
   color: var(--text-primary);
 }
+
+/* ─── SHOWREEL ────────────────────────────────────────────── */
+.showreel-section { border-bottom: 1px solid var(--border); }
+.showreel-header {
+  padding: 36px 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showreel-body { padding: 0 48px 44px; }
 
 /* ─── SECTION HEADER ──────────────────────────────────────── */
 .section-header {
@@ -734,7 +748,7 @@ main { padding-top: var(--nav-h); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 72px 56px;
+  padding: 72px 48px;
 }
 .about-eyebrow {
   display: flex;
@@ -911,7 +925,7 @@ main { padding-top: var(--nav-h); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 64px 56px;
+  padding: 64px 48px;
   border-left: 1px solid var(--border);
 }
 .service-row.reverse .service-row-content {
@@ -1174,7 +1188,7 @@ main { padding-top: var(--nav-h); }
   border-bottom: 1px solid var(--border);
 }
 .project-split-content {
-  padding: 48px 52px;
+  padding: 48px 48px;
   border-right: 1px solid var(--border);
 }
 .project-split-content h2 {
@@ -1279,13 +1293,13 @@ main { padding-top: var(--nav-h); }
   min-height: 580px;
 }
 .contact-info {
-  padding: 64px 56px;
+  padding: 64px 48px;
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
 }
 .contact-form-wrap {
-  padding: 64px 56px;
+  padding: 64px 48px;
   background: var(--surface);
 }
 .contact-form-wrap h2 {
@@ -1505,6 +1519,9 @@ footer {
   .service-item:nth-child(2) { border-right: none; }
   .service-item:nth-child(3) { border-top: 1px solid var(--border); }
   .service-item:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
+  .service-item:first-child { padding-left: 32px; }
+  .service-item:last-child  { padding-right: 32px; }
+  .service-item:last-child .service-arrow { right: 32px; }
 
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .project-card:nth-child(3n) { border-right: 1px solid var(--border); }
@@ -1512,7 +1529,7 @@ footer {
 
   .about-strip { grid-template-columns: 1fr; }
   .about-image { min-height: 360px; border-right: none; border-bottom: 1px solid var(--border); }
-  .about-content { padding: 52px 24px; }
+  .about-content { padding: 52px 32px; }
 
   .cta-section { grid-template-columns: 1fr; gap: 40px; padding: 72px 32px; }
 
@@ -1524,18 +1541,21 @@ footer {
   .service-row { grid-template-columns: 1fr; min-height: auto; }
   .service-row-image { min-height: 320px; }
   .service-row.reverse { direction: ltr; }
-  .service-row-content { padding: 48px 24px; border-left: none; border-top: 1px solid var(--border); }
+  .service-row-content { padding: 48px 32px; border-left: none; border-top: 1px solid var(--border); }
   .service-row.reverse .service-row-content { border-right: none; border-top: 1px solid var(--border); }
 
   .project-split { grid-template-columns: 1fr; }
-  .project-split-content { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 24px; }
+  .project-split-content { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 32px; }
   .project-split-image { min-height: 360px; }
 
   .hero-right { padding-right: 32px; }
 
   .contact-grid { grid-template-columns: 1fr; }
-  .contact-info { border-right: none; border-bottom: 1px solid var(--border); padding: 52px 16px; }
-  .contact-form-wrap { padding: 52px 16px; }
+  .contact-info { border-right: none; border-bottom: 1px solid var(--border); padding: 52px 32px; }
+  .contact-form-wrap { padding: 52px 32px; }
+
+  .showreel-header { padding: 32px 32px 20px; }
+  .showreel-body   { padding: 0 32px 36px; }
 
   .gallery-grid { padding: 0 32px; }
   .project-hero { padding: 0 32px; }
@@ -1569,8 +1589,10 @@ footer {
   .hero-right { min-height: 300px; }
 
   .services-strip { grid-template-columns: 1fr; }
-  .service-item { border-right: none; border-top: none; }
-  .service-item:first-child { border-top: 1px solid var(--border); }
+  .service-item { border-right: none; border-top: none; padding-left: 20px; padding-right: 20px; }
+  .service-item:first-child { border-top: 1px solid var(--border); padding-left: 20px; }
+  .service-item:last-child  { padding-right: 20px; }
+  .service-item:last-child .service-arrow { right: 20px; }
 
   .section-header { padding: 28px 20px 20px; }
 
@@ -1578,16 +1600,19 @@ footer {
   .project-card:nth-child(3n) { border-right: 1px solid var(--border); }
   .project-card:nth-child(2n) { border-right: none; }
 
-  .about-content { padding: 36px 16px 40px; }
+  .about-content { padding: 36px 20px 40px; }
 
-  .service-row-content { padding: 40px 16px; }
+  .service-row-content { padding: 40px 20px; }
 
-  .project-split-content { padding: 40px 16px; }
+  .project-split-content { padding: 40px 20px; }
 
   .hero-right { padding-right: 20px; }
 
-  .contact-info { padding: 44px 12px; }
-  .contact-form-wrap { padding: 44px 12px; }
+  .contact-info { padding: 44px 20px; }
+  .contact-form-wrap { padding: 44px 20px; }
+
+  .showreel-header { padding: 28px 20px 16px; }
+  .showreel-body   { padding: 0 20px 32px; }
 
   .gallery-grid { padding: 0 20px; }
   .project-hero { padding: 0 20px; }
