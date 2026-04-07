@@ -1172,6 +1172,17 @@ main { padding-top: var(--nav-h); }
   gap: 4px;
 }
 
+/* Uniform containers — fixed 3:2 ratio, full image visible, no cropping */
+.project-images--uniform .project-image-full {
+  aspect-ratio: 3 / 2;
+  background: #fff;
+}
+.project-images--uniform .project-image-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* ─── PROJECT HERO ────────────────────────────────────────── */
 .project-hero {
   width: 100%;
