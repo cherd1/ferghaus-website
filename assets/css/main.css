@@ -1226,8 +1226,8 @@ main { padding-top: var(--nav-h); }
   background: #111;
 }
 .project-hero-overlay--sm {
-  height: 56vh;
-  min-height: 380px;
+  height: 48vh;
+  min-height: 340px;
 }
 .project-hero-overlay picture {
   display: block;
