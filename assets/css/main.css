@@ -1325,6 +1325,7 @@ main { padding-top: var(--nav-h); }
 .project-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   border-bottom: 1px solid var(--border);
   padding: 0 48px 32px;
 }
