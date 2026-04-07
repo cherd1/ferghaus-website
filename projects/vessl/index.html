@@ -66,10 +66,29 @@
       <span></span>
     </button>
     <div class="nav-mobile-menu" id="nav-mobile-menu">
-      <a href="/projects">Projects</a>
-      <a href="/services">Services</a>
+      <div class="nav-mobile-accordion">
+        <button class="nav-mobile-acc-btn" aria-expanded="false" data-target="mobile-projects">Projects <span class="nav-mobile-chevron">↓</span></button>
+        <div class="nav-mobile-sub" id="mobile-projects" hidden>
+          <a href="/projects/vessl">Vessl</a>
+          <a href="/projects/sorores-aromatherapy">Sorores Aromatherapy</a>
+          <a href="/projects/reuse-golf-balls">ReUse Golf Balls</a>
+          <a href="/projects/ion-body-armor">Ion Body Armor</a>
+          <a href="/projects/drinks">Drinks</a>
+          <a href="/projects" class="nav-mobile-view-all">View all projects →</a>
+        </div>
+      </div>
+      <div class="nav-mobile-accordion">
+        <button class="nav-mobile-acc-btn" aria-expanded="false" data-target="mobile-services">Services <span class="nav-mobile-chevron">↓</span></button>
+        <div class="nav-mobile-sub" id="mobile-services" hidden>
+          <a href="/services/3d-cad-modelling">3D CAD Modelling</a>
+          <a href="/services/product-visualisation">Product Visualisation</a>
+          <a href="/services/3d-animation">3D Animation</a>
+          <a href="/services/ai-images-generation">AI Directed</a>
+          <a href="/services" class="nav-mobile-view-all">View all services →</a>
+        </div>
+      </div>
       <a href="/about">About</a>
-      <a href="/contact" class="btn-nav">Start a project</a>
+      <a href="/contact">Start a project</a>
     </div>
   </nav>
 

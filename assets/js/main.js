@@ -31,6 +31,26 @@
       });
     });
 
+    // Mobile nav accordion — Projects / Services dropdowns
+    mobileMenu.querySelectorAll('.nav-mobile-acc-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const sub = document.getElementById(targetId);
+        if (!sub) return;
+        const isOpen = !sub.hidden;
+        // Close all subs first
+        mobileMenu.querySelectorAll('.nav-mobile-sub').forEach(s => {
+          s.hidden = true;
+          s.previousElementSibling.setAttribute('aria-expanded', 'false');
+        });
+        // Toggle the clicked one
+        if (!isOpen) {
+          sub.hidden = false;
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
     // Close menu on Escape key
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
