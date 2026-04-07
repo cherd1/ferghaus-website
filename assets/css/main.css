@@ -1162,7 +1162,9 @@ main { padding-top: var(--nav-h); }
 .project-image-full img,
 .project-image-full video {
   width: 100%;
-  height: auto;
+  max-height: 72vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 /* Stacked layout — no side-by-side, ever */
