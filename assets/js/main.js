@@ -86,16 +86,17 @@
   loops.forEach(video => {
     if (prefersReducedMotion) {
       video.pause();
-      // Show poster frame instead
-      video.style.display = 'none';
       const poster = video.getAttribute('poster');
       if (poster) {
+        // Has a poster image — replace video with it
+        video.style.display = 'none';
         const img = document.createElement('img');
         img.src = poster;
         img.alt = video.getAttribute('aria-label') || '';
         img.className = video.className;
         video.parentNode.insertBefore(img, video);
       }
+      // No poster: leave video visible, paused at first frame
     }
   });
 
@@ -110,7 +111,7 @@
           video.pause();
         }
       });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.1 });
 
     loops.forEach(video => videoObserver.observe(video));
   }
@@ -120,6 +121,9 @@
   const SVG_PAUSE = '<svg viewBox="0 0 10 12" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="3.5" height="12"/><rect x="6.5" y="0" width="3.5" height="12"/></svg>';
 
   loops.forEach(video => {
+    // Skip if video was replaced by a poster image
+    if (video.style.display === 'none') return;
+
     const container = video.parentElement;
     if (!container) return;
 
@@ -134,7 +138,7 @@
     btn.setAttribute('aria-label', 'Pause animation');
     btn.innerHTML = SVG_PAUSE;
 
-    // Skip if reduced motion — video is already paused/hidden
+    // If reduced motion: video is paused at first frame, show play button
     if (prefersReducedMotion) {
       btn.innerHTML = SVG_PLAY;
       btn.setAttribute('aria-label', 'Play animation');
