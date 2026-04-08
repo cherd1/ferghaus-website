@@ -101,7 +101,10 @@
   });
 
   /* ─── VIDEOS: staggered autoplay, 2s gap between each ───── */
-  if (!prefersReducedMotion) {
+  // On mobile, native autoplay (muted + playsinline) is more reliable than JS .play()
+  // from a setTimeout, which can be rejected by mobile browsers as a non-gesture call.
+  const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+  if (!prefersReducedMotion && !isMobile) {
     loops.forEach((video, i) => {
       // Pause immediately to override HTML autoplay attribute
       video.pause();
