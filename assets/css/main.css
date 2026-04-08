@@ -1658,6 +1658,40 @@ main { padding-top: var(--nav-h); }
   text-align: center;
 }
 
+/* ─── VIDEO PLAY/PAUSE TOGGLE ─────────────────────────────── */
+.video-toggle {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.18s;
+  z-index: 3;
+  padding: 0;
+  color: var(--text-primary);
+}
+.video-toggle:hover {
+  opacity: 1;
+}
+.video-toggle:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+.video-toggle svg {
+  width: 9px;
+  height: 11px;
+  display: block;
+  pointer-events: none;
+}
+
 /* ─── FOOTER ──────────────────────────────────────────────── */
 footer {
   padding: 56px 48px 40px;

@@ -82,7 +82,7 @@
   }
 
   /* ─── VIDEOS: respect prefers-reduced-motion ──────────── */
-  const loops = document.querySelectorAll('video[data-loop]');
+  const loops = document.querySelectorAll('video[loop]');
   loops.forEach(video => {
     if (prefersReducedMotion) {
       video.pause();
@@ -96,11 +96,6 @@
         img.className = video.className;
         video.parentNode.insertBefore(img, video);
       }
-    } else {
-      video.play().catch(() => {
-        // Autoplay blocked — show poster
-        video.style.display = 'none';
-      });
     }
   });
 
@@ -119,6 +114,48 @@
 
     loops.forEach(video => videoObserver.observe(video));
   }
+
+  /* ─── VIDEOS: play/pause toggle button ───────────────── */
+  const SVG_PLAY  = '<svg viewBox="0 0 10 12" fill="currentColor" aria-hidden="true"><path d="M0 0l10 6-10 6V0z"/></svg>';
+  const SVG_PAUSE = '<svg viewBox="0 0 10 12" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="3.5" height="12"/><rect x="6.5" y="0" width="3.5" height="12"/></svg>';
+
+  loops.forEach(video => {
+    const container = video.parentElement;
+    if (!container) return;
+
+    // Ensure the parent can position the button absolutely
+    if (getComputedStyle(container).position === 'static') {
+      container.style.position = 'relative';
+    }
+
+    const btn = document.createElement('button');
+    btn.className = 'video-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Pause animation');
+    btn.innerHTML = SVG_PAUSE;
+
+    // Skip if reduced motion — video is already paused/hidden
+    if (prefersReducedMotion) {
+      btn.innerHTML = SVG_PLAY;
+      btn.setAttribute('aria-label', 'Play animation');
+    }
+
+    const updateBtn = () => {
+      const paused = video.paused;
+      btn.innerHTML = paused ? SVG_PLAY : SVG_PAUSE;
+      btn.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
+    };
+
+    btn.addEventListener('click', () => {
+      video.paused ? video.play().catch(() => {}) : video.pause();
+      updateBtn();
+    });
+
+    video.addEventListener('play',  updateBtn);
+    video.addEventListener('pause', updateBtn);
+
+    container.appendChild(btn);
+  });
 
   /* ─── VIDEO POSTER: click-to-play ────────────────────── */
   const videoPoster = document.getElementById('showreelPoster');
