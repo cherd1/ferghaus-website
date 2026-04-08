@@ -1795,11 +1795,12 @@ footer {
   .hero-ctas { flex-direction: column; gap: 12px; }
   .hero-ctas .btn-primary { width: 100%; text-align: center; }
   .hero-ctas .btn-ghost { justify-content: center; width: 100%; border: 1px solid var(--border); padding: 14px; }
-  .hero-right { min-height: 220px; }
+  .hero-right { height: 260px; }
 
   .services-strip { grid-template-columns: 1fr; }
   .service-item { border-right: none; padding: 24px 20px; }
   .service-arrow { bottom: auto; top: 50%; right: 20px; transform: translateY(-50%); }
+  .service-item:hover .service-arrow { transform: translateX(4px) translateY(-50%); }
   .service-item + .service-item { border-top: 1px solid var(--border); }
   .service-item:first-child { padding-left: 20px; }
   .service-item:last-child  { padding-right: 20px; }
@@ -1858,7 +1859,7 @@ footer {
 
   .projects-grid--immersive { padding: 20px 20px 48px; gap: 12px; grid-auto-rows: auto; }
   .project-card--featured { grid-column: span 1; }
-  .project-card-cta { padding: 28px 12px 24px; justify-content: flex-start; min-height: auto; }
+  .project-card-cta { padding: 28px 20px 24px; justify-content: flex-start; min-height: auto; }
   .project-card-cta .cta-label { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: none; color: var(--text-primary); }
   .project-card-cta .cta-text { font-size: 22px; }
 
