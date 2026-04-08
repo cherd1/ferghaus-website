@@ -1229,7 +1229,7 @@ main { padding-top: var(--nav-h); }
 
 /* ─── PROJECT IMAGES (breathing room layout) ─────────────── */
 .project-images {
-  padding: 0 10% 48px;
+  padding: 0 0 48px;
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -1843,7 +1843,7 @@ footer {
   .project-hero { padding: 12px 32px; }
   .project-hero-overlay { height: 64vh; min-height: 420px; }
   .project-hero-overlay-text { padding: 0 32px 44px; }
-  .project-images { padding: 0 32px 40px; }
+  .project-images { padding: 0 0 40px; }
   .project-meta-item:first-child { padding-left: 32px; }
   .project-meta-item:last-child  { padding-right: 32px; }
   .project-nav-item:first-child  { padding-left: 32px; }
