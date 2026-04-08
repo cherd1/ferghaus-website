@@ -18,7 +18,8 @@
   }
 
   if (hamburger && mobileMenu) {
-    const backdrop = document.getElementById('nav-backdrop');
+    const backdrop   = document.getElementById('nav-backdrop');
+    const closeBtn   = document.getElementById('nav-drawer-close');
 
     const openMenu = () => {
       mobileMenu.classList.add('open');
@@ -45,6 +46,9 @@
 
     // Close on backdrop tap
     if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Close on X button
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
 
     // Close on Escape key
     document.addEventListener('keydown', e => {
