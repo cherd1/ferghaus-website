@@ -1002,13 +1002,17 @@ main { padding-top: var(--nav-h); }
   border-left: none;
   border-right: 1px solid var(--border);
 }
-.service-row-header h2 {
+.service-row-header h2,
+.service-row-content h2 {
   font-family: var(--font-head);
   font-size: clamp(22px, 2.2vw, 34px);
   font-weight: 200;
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-top: 12px;
+}
+.service-row-content h2 {
+  margin-bottom: 24px;
 }
 
 .service-row-image {
