@@ -1417,12 +1417,15 @@ main { padding-top: var(--nav-h); }
 .project-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  min-height: 480px;
   border-bottom: 1px solid var(--border);
-  padding: 0 48px 32px;
 }
 .project-split-content {
-  padding: 28px 32px;
+  padding: 52px 56px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .project-split-content h2 {
   font-family: var(--font-head);
@@ -1438,7 +1441,7 @@ main { padding-top: var(--nav-h); }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin: 32px 0 14px;
+  margin: 0 0 14px;
 }
 .project-split-content p {
   font-size: 15px;
@@ -1450,10 +1453,11 @@ main { padding-top: var(--nav-h); }
   position: relative;
   overflow: hidden;
   background: var(--bg);
-  padding: 12px;
 }
 .project-split-image img,
 .project-split-image video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1823,8 +1827,8 @@ footer {
   /* reset the desktop-only non-overview padding-top at tablet+ */
   .service-row:not(.service-row--overview) .service-row-content { padding-top: 20px; }
 
-  .project-split { grid-template-columns: 1fr; padding: 0 32px 24px; }
-  .project-split-content { border-bottom: 1px solid var(--border); padding: 24px 24px; }
+  .project-split { grid-template-columns: 1fr; min-height: auto; }
+  .project-split-content { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 32px; justify-content: flex-start; }
   .project-split-image { min-height: 360px; height: 360px; }
 
   .contact-grid { grid-template-columns: 1fr; }
@@ -1894,9 +1898,8 @@ footer {
   .service-row-content { padding: 16px 20px 40px; }
   .service-row-image { min-height: 0; height: 300px; }
 
-  .project-split { padding: 0 0 0; }
-  .project-split-content { padding: 20px 20px; }
-  .project-split-image { height: 280px; min-height: 0; padding: 0; }
+  .project-split-content { padding: 24px 20px; }
+  .project-split-image { height: 280px; min-height: 0; }
 
   .contact-form-wrap { padding: 44px 20px; }
   .contact-info { padding: 44px 20px; }
