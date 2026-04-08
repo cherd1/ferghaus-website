@@ -18,44 +18,38 @@
   }
 
   if (hamburger && mobileMenu) {
+    const backdrop = document.getElementById('nav-backdrop');
+
+    const openMenu = () => {
+      mobileMenu.classList.add('open');
+      if (backdrop) backdrop.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
     hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
     });
 
-    // Close menu when a link inside it is clicked
+    // Close on any link click inside drawer
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMenu);
     });
 
-    // Mobile nav accordion — Projects / Services dropdowns
-    mobileMenu.querySelectorAll('.nav-mobile-acc-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        const sub = document.getElementById(targetId);
-        if (!sub) return;
-        const isOpen = !sub.hidden;
-        // Close all subs first
-        mobileMenu.querySelectorAll('.nav-mobile-sub').forEach(s => {
-          s.hidden = true;
-          s.previousElementSibling.setAttribute('aria-expanded', 'false');
-        });
-        // Toggle the clicked one
-        if (!isOpen) {
-          sub.hidden = false;
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
+    // Close on backdrop tap
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
 
-    // Close menu on Escape key
+    // Close on Escape key
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        closeMenu();
         hamburger.focus();
       }
     });
