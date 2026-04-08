@@ -100,20 +100,15 @@
     }
   });
 
-  /* ─── VIDEOS: only play when in viewport ─────────────── */
+  /* ─── VIDEOS: staggered autoplay, 2s gap between each ───── */
   if (!prefersReducedMotion) {
-    const videoObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    }, { threshold: 0.1 });
-
-    loops.forEach(video => videoObserver.observe(video));
+    loops.forEach((video, i) => {
+      // Pause immediately to override HTML autoplay attribute
+      video.pause();
+      setTimeout(() => {
+        video.play().catch(() => {});
+      }, i * 2000);
+    });
   }
 
   /* ─── VIDEOS: play/pause toggle button ───────────────── */
