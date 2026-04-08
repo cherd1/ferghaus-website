@@ -968,17 +968,26 @@ main { padding-top: var(--nav-h); }
 }
 
 /* ─── SERVICES ALTERNATING ROWS ───────────────────────────── */
+/* Base: 2-column layout used by individual service pages */
 .service-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "header image"
-    "content image";
+  grid-template-areas: "content image";
   min-height: 440px;
   border-bottom: 1px solid var(--border);
 }
 .service-row.reverse {
+  grid-template-areas: "image content";
+}
+
+/* Overview modifier: 3-area layout used by /services/ main page */
+.service-row--overview {
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header image"
+    "content image";
+}
+.service-row--overview.reverse {
   grid-template-areas:
     "image header"
     "image content";
@@ -989,7 +998,7 @@ main { padding-top: var(--nav-h); }
   padding: 52px 48px 24px;
   border-left: 1px solid var(--border);
 }
-.service-row.reverse .service-row-header {
+.service-row--overview.reverse .service-row-header {
   border-left: none;
   border-right: 1px solid var(--border);
 }
@@ -1023,9 +1032,17 @@ main { padding-top: var(--nav-h); }
   padding: 0 48px 56px;
   border-left: 1px solid var(--border);
 }
+/* Individual service pages: content contains h2, needs top padding */
+.service-row:not(.service-row--overview) .service-row-content {
+  padding-top: 52px;
+}
 .service-row.reverse .service-row-content {
   border-left: none;
   border-right: 1px solid var(--border);
+}
+.service-row--overview.reverse .service-row-content {
+  border-left: 1px solid var(--border);
+  border-right: none;
 }
 
 .who-tags {
