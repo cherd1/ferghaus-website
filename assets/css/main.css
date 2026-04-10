@@ -215,7 +215,7 @@ button {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.22);
-  z-index: 97;
+  z-index: 98;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -234,7 +234,7 @@ button {
   max-width: 320px;
   background: var(--bg);
   border-left: 1px solid var(--border);
-  z-index: 98;
+  z-index: 99;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
@@ -1942,7 +1942,7 @@ footer {
   .process-step:last-child { border-bottom: none; }
 
   .info-strip { grid-template-columns: 1fr; }
-  .info-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .info-item { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 20px; }
   .info-item:last-child { border-bottom: none; }
 
   .project-meta { flex-direction: column; flex-wrap: nowrap; }
